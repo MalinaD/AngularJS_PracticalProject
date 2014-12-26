@@ -1,0 +1,9 @@
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.vbproj.GenerateResource.Cache
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.xml
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.Resources.resources
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.dll
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.pdb
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.xml
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.dll
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.pdb
+C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.dll.config

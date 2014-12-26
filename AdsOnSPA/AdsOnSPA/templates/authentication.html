@@ -1,0 +1,17 @@
+﻿<form name="myForm" ng-show="scenario == 'Sign up'" class="my-form">
+    <h2>Sign up</h2>
+    Email: <input type="email" ng-model="user.email" /><br />
+    Username: <input type="text" ng-model="user.username" required /><br />
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+    Password: <input type="password" ng-model="user.password" /><br />
+    <button ng-click="signUp(user)">Sign up</button>
+    or <a href="#" ng-click='scenario="Log in"'>Log in</a>
+</form>
+
+<form ng-show="scenario == 'Log in'">
+    <h2>Log in</h2>
+    Username: <input type="text" ng-model="user.username" /><br />
+    Password: <input type="password" ng-model="user.password" /><br />
+    <button ng-click="logIn(user)">Log in</button>
+    or <a href="#" ng-click='scenario="Sign up"'>Sign up</a>
+</form>
