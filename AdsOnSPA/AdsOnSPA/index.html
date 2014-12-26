@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head data-ng-app="app">
+    <meta charset="utf-8">
+    <title>My AngularJs Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+
+    <style>
+        .my-form {
+            -webkit-transition: all linear 0.5s;
+            transition: all linear 0.5s;
+            background: transparent;
+        }
+
+            .my-form.ng-invalid {
+                background: red;
+            }
+    </style>
+
+</head>
+<body ng-app="AuthApp">
+    <div ng-hide="currentUser">
+        <form name="myForm" ng-show="scenario == 'Sign up'" class="my-form">
+            <h2>Sign up</h2>
+            Email: <input type="email" ng-model="user.email" /><br />
+            Username: <input type="text" ng-model="user.username" required /><br />
+            <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+            Password: <input type="password" ng-model="user.password" /><br />
+            <button ng-click="signUp(user)">Sign up</button>
+            or <a href="#" ng-click='scenario="Log in"'>Log in</a>
+        </form>
+
+        <form ng-show="scenario == 'Log in'">
+            <h2>Log in</h2>
+            Username: <input type="text" ng-model="user.username" /><br />
+            Password: <input type="password" ng-model="user.password" /><br />
+            <button ng-click="logIn(user)">Log in</button>
+            or <a href="#" ng-click='scenario="Sign up"'>Sign up</a>
+        </form>
+    </div>
+
+    <div ng-show="currentUser">
+        <h1>Welcome to my app, {{currentUser.get('username')}}</h1>
+        <p> You have been successfully logged in!</p>
+        <button ng-click="logOut(user)">Log out</button>
+    </div>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/register.js"></script>
+
+    <!--<form name="loginForm" ng-controller="LoginController"
+          ng-submit="login(credentials)" novalidate>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username"
+               ng-model="credentials.username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password"
+               ng-model="credentials.password">
+
+        <button type="submit">Login</button>
+
+    </form>-->
+
+</body>
+
+
+</html>
