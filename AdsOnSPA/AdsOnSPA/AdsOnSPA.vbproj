@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="scripts\ads.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controller.js" />
     <Content Include="scripts\register.js" />
