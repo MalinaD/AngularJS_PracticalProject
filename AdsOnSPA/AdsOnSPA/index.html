@@ -23,7 +23,7 @@
     </style>
 
 </head>
-<body>
+<body >
 
     <header>
         <div class="container">
@@ -34,54 +34,57 @@
     </header>
 
     <main>
-    <div ng-app="AuthApp" class="container">
-        <div ng-hide="currentUser" class="col-sm-4">
-            <form name="myForm" ng-show="scenario == 'Sign up'" class="my-form">
-                <h2>Sign up</h2>
-                <p>To publish a new ad, please log in</p>
-                Email: <input type="email" ng-model="user.email" /><br />
-                Username: <input type="text" ng-model="user.username" required /><br />
-                <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
-                Password: <input type="password" ng-model="user.password" /><br />
-                <button ng-click="signUp(user)" class="btn btn-primary">Sign up</button>
-                or <a href="#" ng-click='scenario="Log in"'>Log in</a>
-            </form>
+        <!--<div ng-app="AuthApp" class="container">
+            <div ng-hide="currentUser" class="col-sm-4">
+                <form name="myForm" ng-show="scenario == 'Sign up'" class="my-form">
+                    <h2>Sign up</h2>
+                    <p>To publish a new ad, please log in</p>
+                    Email: <input type="email" ng-model="user.email" /><br />
+                    Username: <input type="text" ng-model="user.username" required /><br />
+                    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+                    Password: <input type="password" ng-model="user.password" /><br />
+                    <button ng-click="signUp(user)" class="btn btn-primary">Sign up</button>
+                    or <a href="#" ng-click='scenario="Log in"'>Log in</a>
+                </form>
 
-            <form ng-show="scenario == 'Log in'">
-                <h2>Log in</h2>
-                <p>To publish a new ad, please log in</p>
-                Username: <input type="text" ng-model="user.username" /><br />
-                Password: <input type="password" ng-model="user.password" /><br />
-                <button ng-click="logIn(user)" class="btn btn-primary">Log in</button>
-                or <a href="#" ng-click='scenario="Sign up"'>Sign up</a>
-            </form>
-        </div>
-        <div ng-show="currentUser">
-            <h1>Welcome to my app, {{currentUser.get('username')}}</h1>
-            <p> You have been successfully logged in!</p>
-            <button ng-click="logOut(user)" class="btn btn-primary">Log out</button>
-        </div>
-    </div>
-   
-        <div class="container" ng-controller="adsPage">
+                <form ng-show="scenario == 'Log in'">
+                    <h2>Log in</h2>
+                    <p>To publish a new ad, please log in</p>
+                    Username: <input type="text" ng-model="user.username" /><br />
+                    Password: <input type="password" ng-model="user.password" /><br />
+                    <button ng-click="logIn(user)" class="btn btn-primary">Log in</button>
+                    or <a href="#" ng-click='scenario="Sign up"'>Sign up</a>
+                </form>
+            </div>
+            <div ng-show="currentUser">
+                <h1>Welcome to my app, {{currentUser.get('username')}}</h1>
+                <p> You have been successfully logged in!</p>
+                <button ng-click="logOut(user)" class="btn btn-primary">Log out</button>
+            </div>
+        </div>-->
+
+        <div class="container" ng-app="app" ng-controller="adsPage">
             <div class="col-sm-4">
                 <button type="button" ng-click="getItems()" class="btn btn-primary">Get Ads</button>
-                <p ng-repeat="item in items">{{item.title}}</p>
+                <ul>
+                    <li ng-repeat="item in items.results">{{item.title}}</li>
+                </ul>
+                
             </div>
         </div>
-   
-    <div class="container">
-        <div class="col-sm-4">
-            <h3>Categories:</h3> <br /> <hr />
+
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Categories:</h3> <br /> <hr />
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="container">
-        <div class="col-sm-4">
-            <h3>Towns:</h3> <br /> <hr />
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Towns:</h3> <br /> <hr />
+            </div>
         </div>
-     </div>
 
     </main>
     <footer>

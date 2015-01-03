@@ -2,25 +2,15 @@
        "lyyZxoKZqWBwUGJ8fLb9DV5nbQSMjRnVTARr56xQ",
        "k5SeG81JvG9cr1I7Ooc4D3Vm6DhfrJhn7XaSU540");
 
-angular.module('adsApp', [])
-
-     .controller('adsPage', function ($scope, $http) {
+    app.controller('adsPage', function ($scope, $http) {
          $scope.items = [];
-         var data = [];
+         
          var categoryArray = [];
-
-         var obj = {
-             title: "",
-             text: "",
-             imageDataUrl: "",
-             categoryId: " ",
-             townId: ""
-         }
-
-         data.push(obj);
+      
 
          $scope.getItems = function () {
-             $https({
+             var data = [];
+             $http({
                  method: 'GET',
                  url: 'https://api.parse.com/1/classes/Ads',
                  headers: {
@@ -31,6 +21,16 @@ angular.module('adsApp', [])
              })
 
              .success(function (data, status) {
+                 
+                 var obj = {
+                     title: "",
+                     text: "",
+                     imageDataUrl: "",
+                     categoryId: " ",
+                     townId: ""
+                 }
+
+                 data.push(obj);
                  $scope.items = data;
              })
              .error(function (data, status) {
