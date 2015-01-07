@@ -449,6 +449,7 @@
     <Content Include="scripts\controllers\controller.js" />
     <Content Include="scripts\parse\auth.js" />
     <Content Include="styles\bootstrap.min.css" />
+    <Content Include="styles\style.css" />
     <Content Include="templates\authentication.html" />
     <Content Include="templates\left-sidebar.html" />
     <Content Include="templates\login.html" />

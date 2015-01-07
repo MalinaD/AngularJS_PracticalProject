@@ -1,0 +1,28 @@
+﻿body {
+    padding:0;
+    margin:0;
+    font-family:'Times New Roman', Times, serif
+}
+
+main{
+    height:800px;
+}
+.box{
+    background-color:#54ad56;
+    border: 1px solid black;
+    border-radius:2px;
+    display:block;
+    padding:3px;
+    margin:15px;
+}
+
+.box h2{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.box ul li{
+    text-decoration:none;
+    font-size:12px;
+}
+
