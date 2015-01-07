@@ -68,7 +68,6 @@
     <Folder Include="Ads-REST-Services\Ads.Web\obj\Debug\TempPE\" />
     <Folder Include="Ads-REST-Services\Ads.Web\Properties\PublishProfiles\" />
     <Folder Include="Ads-REST-Services\Ads.Web\Views\Ads\" />
-    <Folder Include="controllers\" />
     <Folder Include="scripts\filters\" />
   </ItemGroup>
   <ItemGroup>
@@ -448,9 +447,11 @@
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controllers\controller.js" />
     <Content Include="scripts\parse\auth.js" />
+    <Content Include="scripts\services\adsServices.js" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\style.css" />
     <Content Include="templates\authentication.html" />
+    <Content Include="templates\home.html" />
     <Content Include="templates\left-sidebar.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\parseAuth.html" />
