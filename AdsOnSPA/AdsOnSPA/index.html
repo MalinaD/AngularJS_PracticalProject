@@ -25,7 +25,7 @@
     </style>
 
 </head>
-<body >
+<body ng-app="app">
 
     <header>
         <div class="container">
@@ -37,24 +37,24 @@
 
     <main>
 
-        <div class="container" ng-app="app" ng-controller="adsPage">
+        <!--<div class="container" ng-controller="adsPage">
             <div class="col-sm-4">
                 <button type="button" ng-click="getItems()" class="btn btn-primary">Get Ads</button>
                 <ul>
                     <li ng-repeat="item in items.results">{{item.title}}</li>
                 </ul>
-                
+
             </div>
+        </div>-->
+
+        <div class=" col-md-2 sidebar" >
+            <div ng-include src="'../templates/left-sidebar.html'"></div>
         </div>
 
-        <div class=" col-md-2 sidebar">
-            <div ng-include="'templates/left-sidebar.html'"></div>
+        <div class=" col-md-2 sidebar" >
+            <div ng-include src="'../templates/right-sidebar.html'"></div>
         </div>
 
-        <div class=" col-md-2 sidebar">
-            <div ng-include="'templates/right-sidebar.html'"></div>
-        </div>
- 
 
     </main>
     <footer>
