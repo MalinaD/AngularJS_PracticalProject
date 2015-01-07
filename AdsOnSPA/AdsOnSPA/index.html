@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>My AngularJs Project</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-resource.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
 
@@ -73,7 +75,10 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class=" col-md-2 sidebar">
+            <div ng-include="'templates/right-sidebar.html'"></div>
+        </div>
+        <!--<div class="container">
             <div class="col-sm-4">
                 <h3>Categories:</h3> <br /> <hr />
             </div>
@@ -84,7 +89,7 @@
             <div class="col-sm-4">
                 <h3>Towns:</h3> <br /> <hr />
             </div>
-        </div>
+        </div>-->
 
     </main>
     <footer>
@@ -92,8 +97,8 @@
     </footer>
 
     <script src="../scripts/app.js"></script>
-    <script src="../scripts/register.js"></script>
-    <script src="../scripts/ads.js"></script>
+    <script src="../scripts/parse/auth.js"></script>
+    <script src="../scripts/parse/ads.js"></script>
 
 
 </body>

@@ -7,3 +7,12 @@ C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalPro
 C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.dll
 C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.pdb
 C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.dll.config
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.dll.config
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.dll
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.pdb
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\bin\AdsOnSPA.xml
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.Resources.resources
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.vbproj.GenerateResource.Cache
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.dll
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.xml
+C:\Users\malina\Documents\GitHub\AngularJS_PracticalProject\AdsOnSPA\AdsOnSPA\obj\Debug\AdsOnSPA.pdb
