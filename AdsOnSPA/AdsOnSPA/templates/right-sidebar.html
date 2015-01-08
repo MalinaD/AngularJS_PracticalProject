@@ -41,6 +41,26 @@
     </div>
 </div>
 
-<div class="box">
-    <h2>Towns</h2>
+<div class="panel panel-success box">
+    <div class="panel-heading">
+        <h3 class="panel-title">Towns</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="special"
+                ng-class="{'selected' : selectedTownId == null}"
+                ng-click="townClicked(null)">
+                All
+            </li>
+            <li ng-repeat="town in towns"
+                ng-click="townClicked(town.id)"
+                ng-class="{
+            'selected' : selectedTownId == town.id
+            }">
+                <a href="#" class="list-group-item">
+                    {{town.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

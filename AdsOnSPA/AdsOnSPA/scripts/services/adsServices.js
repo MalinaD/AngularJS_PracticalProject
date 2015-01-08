@@ -29,3 +29,16 @@ app.factory('categoriesSerivces',
             }
         }
     });
+
+app.factory('townsServices',
+    function ($resource, baseServiceUrl) {
+        var townsResource = $resource(
+            baseServiceUrl + '/api/towns'
+               );
+
+        return {
+            getTowns: function (success, error) {
+                return townsResource.query(success, error);
+            }
+        }
+    });
