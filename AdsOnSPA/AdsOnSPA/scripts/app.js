@@ -12,12 +12,12 @@ app.config(function ($routeProvider) {
     });
 
     $routeProvider.when('/login', {
-        templateUrl: "../templates/login.html",
+        templateUrl: "templates/login.html",
         controller: 'LoginController'
     });
 
     $routeProvider.when('/register', {
-        templateUrl: "../templates/register.html",
+        templateUrl: "templates/register.html",
         controller: 'RegisterController'
     });
 

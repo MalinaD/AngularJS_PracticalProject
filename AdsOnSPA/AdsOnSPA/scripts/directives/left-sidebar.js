@@ -2,7 +2,7 @@
     return {
         controller: 'HomeController',
         restrict: 'E', //E = element
-        templateUrl: '',
+        templateUrl: '../templates/home.html',
         replace: true
     };
 });

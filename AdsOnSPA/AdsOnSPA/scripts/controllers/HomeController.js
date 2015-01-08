@@ -1,15 +1,19 @@
 ﻿'use strict';
 
-app.controller('HomeController',['$scope',
-    function ($scope, $rootScope, adsService, notifyService, pageSize) {
-        adsService.getAds(
-            null,
-            function success(data,status, headers, config) {
-                $scope.pageTitle = ' Home';
+app.controller('HomeController',
+    function ($scope, $route,$log, adsData) {
+        adsData.getAll()
+            .$promise
+            .$then(function(data){
+                $scope.data = data;
             },
             function error(err) {
-                notifyService.showError("Cannot load ads", err);
-            }
-            );
+                $log.error(error);
+            });
+
+        $scope.reload = function () {
+            $route.reload();
+        }
     }
-]);
+);
+

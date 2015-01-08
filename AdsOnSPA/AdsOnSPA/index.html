@@ -4,10 +4,13 @@
 <head data-ng-app="app">
     <meta charset="utf-8">
     <title>My AngularJs Project</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-resource.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
 
 
@@ -49,9 +52,13 @@
             <div ng-include src="'../templates/left-sidebar.html'"></div>
         </div>
 
-        <div class=" col-md-2">
+        <!--<div class=" col-md-2" ng-controller="HomeController">
             <div ng-include src="'../templates/home.html'"></div>
-        </div>
+        </div>-->
+
+        <a href="#/ads">All Ads</a>
+
+        <ng-view></ng-view>
 
         <div class=" col-md-2 sidebar rightSidebar" ng-controller="RightSidebarController">
             <div ng-include src="'../templates/right-sidebar.html'"></div>

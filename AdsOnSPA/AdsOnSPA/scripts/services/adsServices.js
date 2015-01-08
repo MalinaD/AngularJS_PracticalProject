@@ -1,19 +1,27 @@
 ﻿'use strict';
 
-app.factory('adsService',
+app.factory('adsData',
     function ($resource, baseServiceUrl) {
         var adsResource = $resource(
-            baseServiceUrl + '/api/ads',
-            null,
+            baseServiceUrl + '/api/ads/:id',
+            {id: '@id'},
             {
-                'getAll': { method: 'GET' }
+                update: { method: 'PUT' }
             }
             );
 
+        function getAllAds() {
+            return adsResource.get();
+        }
+
+        function getAdById(id) {
+            return resource.get({ id: id });
+        }
+
+
         return {
-            getAds: function (params, success, error) {
-                return adsResource.getAll(params, success, error);
-            }
+            getAll: getAllAds,
+            getById: getAdById
         }
     });
 
