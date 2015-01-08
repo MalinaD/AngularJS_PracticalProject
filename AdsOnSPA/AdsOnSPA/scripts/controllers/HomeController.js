@@ -3,9 +3,9 @@
 app.controller('HomeController',
     function ($scope, $route,$log, adsData) {
         adsData.getAll()
-            .$promise
+           // .$promise
             .$then(function(data){
-                $scope.data = data;
+                $scope.adsData = data;
             },
             function error(err) {
                 $log.error(error);
