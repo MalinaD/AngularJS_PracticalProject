@@ -443,6 +443,7 @@
     <Content Include="scripts\controllers\LoginController.js" />
     <Content Include="scripts\controllers\RegisterController.js" />
     <Content Include="scripts\controllers\RightSidebarController.js" />
+    <Content Include="scripts\directives\left-sidebar.js" />
     <Content Include="scripts\parse\ads.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\controllers\controller.js" />
