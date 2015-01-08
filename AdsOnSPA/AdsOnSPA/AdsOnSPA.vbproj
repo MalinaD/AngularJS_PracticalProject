@@ -440,6 +440,7 @@
     <Content Include="Ads-REST-Services\packages\WebGrease.1.6.0\tools\WG.EXE" />
     <Content Include="index.html" />
     <Content Include="scripts\controllers\AdDetailsController.js" />
+    <Content Include="scripts\controllers\AppController.js" />
     <Content Include="scripts\controllers\HomeController.js" />
     <Content Include="scripts\controllers\LoginController.js" />
     <Content Include="scripts\controllers\RegisterController.js" />
