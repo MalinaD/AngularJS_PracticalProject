@@ -452,6 +452,7 @@
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\style.css" />
     <Content Include="templates\authentication.html" />
+    <Content Include="templates\header.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\left-sidebar.html" />
     <Content Include="templates\login.html" />

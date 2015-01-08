@@ -1,11 +1,17 @@
 ﻿body {
     padding:0;
     margin:0;
-    font-family:'Times New Roman', Times, serif
+    font-family:'Times New Roman', Times, serif;
+    background-color:#9ce165;
 }
 
 main{
     height:800px;
+}
+
+header h1{
+    text-align:center;
+    padding:3px;
 }
 .box{
     background-color:#54ad56;
