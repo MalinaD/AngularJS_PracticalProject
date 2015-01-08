@@ -450,6 +450,7 @@
     <Content Include="scripts\controllers\controller.js" />
     <Content Include="scripts\parse\auth.js" />
     <Content Include="scripts\services\adsServices.js" />
+    <Content Include="scripts\services\authService.js" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\style.css" />
     <Content Include="templates\adDetails.html" />

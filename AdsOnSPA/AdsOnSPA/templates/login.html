@@ -3,23 +3,18 @@
 
     <form class="form-horizontal">
         <fieldset>
-            <legend>Legend</legend>
+            <legend>Login</legend>
             <div class="form-group">
                 <label for="inputUsername" class="col-lg-2 control-label">Username</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="inputUsername" placeholder="Username" type="text">
+                    <input class="form-control" id="username" ng-model="userData.username" placeholder="Username" type="text" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                 <div class="col-lg-10">
-                    <input class="form-control" id="inputPassword" placeholder="Password" type="password">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Checkbox
-                        </label>
-                    </div>
+                    <input class="form-control" id="password" ng-model="userData.password" placeholder="Password" type="password" required>
                 </div>
             </div>
             
@@ -27,7 +22,9 @@
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     <button class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                   
+                    <a ng-click="login(userData)" class="button">Login</a>
+                    <a href="#/register" class="link">Register</a>
                 </div>
             </div>
         </fieldset>
