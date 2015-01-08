@@ -9,7 +9,7 @@ app.controller('RegisterController',
                     $location.path("/");
                 },
                 function error(err) {
-                    // TODO: display the error message returned by the server
+                    notifyService.showError("User registration failed", err);
                 }
             );
         };
