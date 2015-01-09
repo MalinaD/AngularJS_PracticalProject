@@ -15,7 +15,7 @@ app.factory('adsData',
         }
 
         function getAdById(id) {
-            return resource.get({ id: id });
+            return adsResource.get({ id: id });
         }
 
 

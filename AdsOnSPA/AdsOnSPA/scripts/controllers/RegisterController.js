@@ -8,11 +8,11 @@ app.controller('RegisterController',
         $scope.register = function (userData) {
             authService.register(userData,
                 function success() {
-                    notifyService.showInfo("Registration successful");
+                    //notifyService.showInfo("Registration successful");
                     $location.path("/login");
                 },
                 function error(err) {
-                    notifyService.showError("User registration failed", err);
+                   // notifyService.showError("User registration failed", err);
                 }
             );
         };
