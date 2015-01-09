@@ -448,6 +448,7 @@
     <Content Include="scripts\controllers\LoginController.js" />
     <Content Include="scripts\controllers\RegisterController.js" />
     <Content Include="scripts\controllers\RightSidebarController.js" />
+    <Content Include="scripts\controllers\UserPublishNewAdController.js" />
     <Content Include="scripts\directives\left-sidebar.js" />
     <Content Include="scripts\parse\ads.js" />
     <Content Include="scripts\app.js" />
@@ -456,6 +457,7 @@
     <Content Include="scripts\services\adsServices.js" />
     <Content Include="scripts\services\authService.js" />
     <Content Include="scripts\services\notifyService.js" />
+    <Content Include="scripts\services\userSerivce.js" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\style.css" />
     <Content Include="templates\adDetails.html" />
@@ -466,6 +468,7 @@
     <Content Include="templates\login.html" />
     <Content Include="templates\pagination.html" />
     <Content Include="templates\parseAuth.html" />
+    <Content Include="templates\publishNewAd.html" />
     <Content Include="templates\register.html" />
     <Content Include="templates\right-sidebar.html" />
     <Content Include="Web.config" />
