@@ -22,7 +22,7 @@ app.controller('HomeController',
 
         adsData.getById(ad)
            .$promise
-            .$then(function(data){
+            .then(function(data){
                 //$scope.ads = data.ads;
                 //$scope.numberOfPages = 3;
                 //$scope.total = data.numItem;

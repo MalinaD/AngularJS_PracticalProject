@@ -6,7 +6,7 @@ app.factory('adsData',
             baseServiceUrl + '/api/ads/:id',
             {id: '@id'},
             {
-                update: { method: 'POST' }
+                update: { method: 'GET' }
             }
             );
 
