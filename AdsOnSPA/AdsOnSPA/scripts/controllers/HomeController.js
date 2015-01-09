@@ -45,6 +45,20 @@ app.controller('HomeController',
             $route.reload();
         };
 
+        $scope.$on("categorySelectionChanged",
+            function (event, selectedCategoryId) {
+                $scope.adsParam.categoryId = selectedCategoryId;
+                $scope.adsParam.startPage = 1;
+                $scope.reload();
+            });
+
+        $scope.$on("townSelectionChanged",
+            function (event, selectedTownId) {
+                $scope.adsParam.categoryId = selectedTownId;
+                $scope.adsParam.startPage = 1;
+                $scope.reload();
+            });
+
         $scope.setPage = function (pageNo) {
             $scope.currentPage = pageNo;
         };
