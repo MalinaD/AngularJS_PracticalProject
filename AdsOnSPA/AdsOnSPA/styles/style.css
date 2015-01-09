@@ -37,6 +37,18 @@ header h1{
 .box ul li{
     list-style-type:none;
 }
+
+.login, .register {
+    width: 400px;
+    display:block;
+    margin-left:712px;
+    padding:10px;
+}
+
+.rightsidebar{
+    margin-top: -250px;
+}
+
 .rightSidebar{
     float:right;
 }
