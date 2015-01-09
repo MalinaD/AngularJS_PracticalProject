@@ -3,12 +3,10 @@
 app.controller('HomeController',
     function ($scope, $route,$location, $log, adsData) {
 
-        $scope.currentPage = 1;
-        $scope.numPerPage = 2;
-        $scope.maxVisiblePages = 5;
-        $scope.shouldHaveFirstLastButtons = true;
-        $scope.data = adsData;
-        adsData.pageNum = 1;
+        var info={
+            startPage : 1,
+            pageSize  : 10
+        }
 
         var ad = {
             title: $scope.title,
@@ -19,13 +17,23 @@ app.controller('HomeController',
             //townId: $scope.townData.getSelectedTownId()
         };
 
+        //adsData.getAll(
+        //    null,
+        //    function success(data) {
+        //        $scope.ads = data;
+        //    },
+        //    function error(err) {
+        //        //TODO
+        //    }
+        //    );
 
         adsData.getById(ad)
            .$promise
-            .then(function(data){
-                //$scope.ads = data.ads;
-                //$scope.numberOfPages = 3;
-                //$scope.total = data.numItem;
+            .then(function(response){
+                $scope.data = response;
+                $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
+                $scope.itemsPerPage = 10;
+               $scope.total = $scope.data.numItems;
                 $location.path('/');
             },
             function error(err) {
