@@ -21,10 +21,10 @@ app.config(function ($routeProvider) {
         controller: 'RegisterController'
     });
 
-    //$routeProvider.when('/ads/GET-api-Ads?StartPage={1}&PageSize={10}', {
-    //    templateUrl: "../templates/home.html",
-    //    controller: 'AddDetailsController'
-    //});
+    $routeProvider.when('/add', {
+        templateUrl: "../templates/adDetails.html",
+        controller: 'AddDetailsController'
+    });
 
     $routeProvider.otherwise(
         { redirectTo: '/' }

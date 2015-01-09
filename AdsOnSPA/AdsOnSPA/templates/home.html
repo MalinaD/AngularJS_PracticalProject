@@ -1,25 +1,25 @@
 ﻿<button class="btn" ng-click="reload()">Reload</button>
-<ul class="ads" >
-    <li ng-repeat="ad in ads" class="box">
-        <a href="#/ads/{{ad.id}}"></a>
-            <h1>{{ad.title}}</h1>
+<ul class="ads col-sm-8" data-ng-controller="HomeController">
+    <li data-ng-repeat="ad in data.ads" class="box">
+        <!--<a href="#/ads/{{ad.id}}"></a>-->
+        <h1>{{ad.title}}</h1>
 
-            <div>
-                <strong>Date:</strong>
-                {{ad.date | date: 'dd-MMM-yyyy'}}
-            </div>
+        <div>
+            <strong>Date:</strong>
+            {{ad.date | date: 'dd-MMM-yyyy'}}
+        </div>
 
-            <!--<div ng-if="ad.imageDataUrl">
+        <!--<div ng-if="ad.imageDataUrl">
             <strong>Image:</strong>
             <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
         </div>-->
-            //TODO: display the other fields from the ad
+        //TODO: display the other fields from the ad
 
-            <div><strong>Text:</strong> {{ad.text}}</div>
-            <div><strong>Town:</strong> {{ad.townName}}</div>
-            <div><strong>Category:</strong> {{ad.categoryName}}</div>
-            <div><strong>Status:</strong> {{ad.status}}</div>
-</li>
+        <div><strong>Text:</strong> {{ad.text}}</div>
+        <div><strong>Town:</strong> {{ad.townName}}</div>
+        <div><strong>Category:</strong> {{ad.categoryName}}</div>
+        <div><strong>Status:</strong> {{ad.status}}</div>
+    </li>
 </ul>
 
 <div ng-if="ads.ads.length==0" class="box no-data">

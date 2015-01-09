@@ -52,8 +52,10 @@
         </div>-->
 
         <a href="#/ads">All Ads</a>
-
-        <ng-view></ng-view>
+        <div id="container" class="col-sm-10">
+            <data-ng-view></data-ng-view>
+        </div>
+       
 
         <div class=" col-md-2 sidebar rightSidebar" ng-controller="RightSidebarController">
             <div ng-include src="'../templates/right-sidebar.html'"></div>
