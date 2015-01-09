@@ -1,11 +1,11 @@
 ﻿'use strict';
 
 app.controller('LoginController',
-    function ($scope,$rootScope, $location, authServices, notifyService) {
+    function ($scope,$rootScope, $location, authService, notifyService) {
         $scope.login = function (userData) {
-            authServices.login(userData,
+            authService.login(userData,
                 function success() {
-                    notifyService.showInfo("Login successful");
+                    //notifyService.showInfo("Login successful");
                     $location.path("/");
                 },
                 function error(err) {
@@ -14,3 +14,5 @@ app.controller('LoginController',
         };
     }
 );
+
+
