@@ -7,21 +7,21 @@ h1>
         
         </h1>
 
-        <div>
+        <div class="adsDate">
             <strong>Date:</strong>
             {{ad.date | date: 'dd-MMM-yyyy'}}
         </div>
 
-        <!--<div ng-if="ad.imageDataUrl">
+        <div ng-if="ad.imageDataUrl">
             <strong>Image:</strong>
             <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
-        </div>-->
+        </div>
         
-
-       //TODO:
-        display the other fields from the ad
         <div class="col-sm-7" data-ng-class="adContent">
-            <div><strong>Text:</strong> {{ad.text}}</div>
+           <label><strong>Text:</strong> </label> <div class="adsText">{{ad.text}}</div>
+           <label><strong>Name:</strong> </label> <div class="adsContent">{{ad.ownerName}}</div>
+           <label><strong>Email:</strong> </label> <div class="adsContent">{{ad.ownerEmail}}</div>
+           <label><strong>Phone:</strong> </label> <div class="adsContent">{{ad.ownerPhone}}</div>
             <!--<div><strong>Town:</strong> {{ad.townName}}</div>
             <div><strong>Category:</strong> {{ad.categoryName}}</div>
             <div><strong>Status:</strong> {{ad.status}}</div>-->

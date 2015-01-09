@@ -52,3 +52,25 @@ header h1{
 .rightSidebar{
     float:right;
 }
+
+.ad-image{
+    width:100px;
+    height:100px;
+}
+
+.ads h1{
+  font-size:28px;
+  font-weight:bold;
+  text-align:left;
+}
+
+.adsDate, .adsContent{
+  font-size:18px;
+  font-weight:bold;
+  text-align:right;
+} 
+
+.adsText{
+    display:block;
+    border:1px dotted black;
+}
