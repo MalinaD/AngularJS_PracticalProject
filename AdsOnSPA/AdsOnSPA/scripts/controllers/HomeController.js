@@ -11,8 +11,9 @@ app.controller('HomeController',
         var ad = {
             title: $scope.title,
             text: $scope.text,
-            //TODO image: $scope.image,
-           // imageDataUrl: $scope.imageDataUrl,
+            image: $scope.image,
+            imageDataUrl: $scope.imageDataUrl
+            //TODO ,
            // categoryId: $scope.catData.getSelectedCatId(),
             //townId: $scope.townData.getSelectedTownId()
         };
@@ -42,7 +43,34 @@ app.controller('HomeController',
 
         $scope.reload = function () {
             $route.reload();
+        };
+
+        $scope.setPage = function (pageNo) {
+            $scope.currentPage = pageNo;
+        };
+
+        $scope.pageChanged = function () {
+                getResultsPage(newPage);
+            $log.log('Page changed to: ' + $scope.currentPage);
+        };
+
+        function getResultsPage(pageNumber) {
+            adsData.getAll(pageNumber, currentTownId, currentCategoryId)
+                .then(function (data) {
+                $scope.loading = true;
+                $scope.adsData = data;
+                $scope.totalAds = parseInt(data.numPages) * 5;
+                currentPage = pageNumber;
+            }, function (error) {
+                $rootScope.$broadcast('alertMessage', ajaxErrorText);
+            }).finally(function () {
+                $scope.loading = false;
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 1000);
+            });
         }
+
     }
 );
 

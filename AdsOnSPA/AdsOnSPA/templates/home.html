@@ -30,7 +30,13 @@ h1>
     </li>
 </ul>
 
+
 <div ng-if="data.ads.length==0" class="box no-data">
     No ads found. Please try again later.
 </div>
 
+<div class="row pagination-div">
+    <div class='col-md-9 col-sm-10 col-xs-12 col-centered'>
+        <div on-page-change="pageChanged(newPageNumber)" ng-include src="'../templates/pagination.html'"></div>
+    </div>
+</div>
