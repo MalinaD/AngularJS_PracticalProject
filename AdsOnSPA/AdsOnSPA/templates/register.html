@@ -11,19 +11,59 @@
             </div>
 
             <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                <label for="password" class="col-lg-2 control-label">Password</label>
                 <div class="col-lg-10">
                     <input class="form-control" id="password" ng-model="userData.password" placeholder="Password" type="password" required>
                 </div>
             </div>
 
+            <div class="form-group">
+                <label for="confirmPassword" class="col-lg-2 control-label">Confirm password</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="confirmPassword" ng-model="userData.confirmPassword" placeholder="Password" type="password" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="name" ng-model="userData.name" placeholder="Name" type="text" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="email" ng-model="userData.email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="col-lg-2 control-label">Phone</label>
+                <div class="col-lg-10">
+                    <input class="form-control" id="phone" ng-model="userData.phone" placeholder="Phone" type="text" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="town" class="col-lg-2 control-label">Town</label>
+                <div class="col-lg-10">
+                    <select id="town" ng-model="userData.townId" class="form-control">
+                        <option value="null">(None)</option>
+                        <option ng-repeat="town in towns"
+                                value="{{town.id}}">
+                            {{town.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
 
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     <button class="btn btn-default">Cancel</button>
 
-                    <a ng-click="login(userData)" class="button">Login</a>
-                    <a ng-click="register(userData)" href="#/register" class="link">Register</a>
+                    <input type="button" ng-click="register(userData)" class="btn btn-default" value="Register" />
+                    <a ng-click="login(userData)" href="#/login" class="link">Login here</a>
                 </div>
             </div>
         </fieldset>
