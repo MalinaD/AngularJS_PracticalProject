@@ -441,6 +441,7 @@
     <Content Include="index.html" />
     <Content Include="lib\bootstrap-theme.min.css" />
     <Content Include="lib\bootstrap.js" />
+    <Content Include="lib\jquery.noty.packaged.js" />
     <Content Include="lib\ui-bootstrap-tpls-0.12.0.min.js" />
     <Content Include="scripts\controllers\AddDetailsController.js" />
     <Content Include="scripts\controllers\AppController.js" />
