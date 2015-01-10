@@ -467,11 +467,12 @@
     <Content Include="templates\home.html" />
     <Content Include="templates\left-sidebar.html" />
     <Content Include="templates\login.html" />
-    <Content Include="templates\pagination.html" />
+    <Content Include="templates\pagination\pagination.html" />
     <Content Include="templates\parseAuth.html" />
     <Content Include="templates\publishNewAd.html" />
     <Content Include="templates\register.html" />
     <Content Include="templates\right-sidebar.html" />
+    <Content Include="template\pagination\pagination.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

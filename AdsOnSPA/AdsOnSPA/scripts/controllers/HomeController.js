@@ -18,28 +18,29 @@ app.controller('HomeController',
             //townId: $scope.townData.getSelectedTownId()
         };
 
-        //adsData.getAll(
-        //    null,
-        //    function success(data) {
-        //        $scope.ads = data;
-        //    },
-        //    function error(err) {
-        //        //TODO
-        //    }
-        //    );
-
-        adsData.getById(ad)
-           .$promise
-            .then(function(response){
-                $scope.data = response;
-                $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
-                $scope.itemsPerPage = 10;
-               $scope.total = $scope.data.numItems;
+        adsData.getAll(
+            null,
+            function success(data) {
+                $scope.ads = data;
                 $location.path('/');
             },
             function error(err) {
                 $log.error(error);
-            });
+            }
+            );
+
+        //adsData.getById(ad)
+        //   .$promise
+        //    .then(function(response){
+        //        $scope.data = response;
+        //        $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
+        //        $scope.itemsPerPage = 10;
+        //       $scope.total = $scope.data.numItems;
+        //        $location.path('/');
+        //    },
+        //    function error(err) {
+        //        $log.error(error);
+        //    });
 
         $scope.reload = function () {
             $route.reload();
@@ -47,15 +48,15 @@ app.controller('HomeController',
 
         $scope.$on("categorySelectionChanged",
             function (event, selectedCategoryId) {
-                $scope.adsParam.categoryId = selectedCategoryId;
-                $scope.adsParam.startPage = 1;
+                $scope.adsParams.categoryId = selectedCategoryId;
+                $scope.adsParams.startPage = 1;
                 $scope.reload();
             });
 
         $scope.$on("townSelectionChanged",
             function (event, selectedTownId) {
-                $scope.adsParam.categoryId = selectedTownId;
-                $scope.adsParam.startPage = 1;
+                $scope.adsParams.categoryId = selectedTownId;
+                $scope.adsParams.startPage = 1;
                 $scope.reload();
             });
 

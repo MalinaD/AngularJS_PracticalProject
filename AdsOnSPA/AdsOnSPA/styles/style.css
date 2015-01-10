@@ -6,7 +6,10 @@
 }
 
 main{
-    height:800px;
+    height:3600px;
+    margin:20px;
+    width:98%;
+
 }
 
 header h1{
@@ -39,10 +42,11 @@ header h1{
 }
 
 .login, .register {
-    width: 400px;
-    display:block;
-    margin-left:712px;
+    display:inline-block;
     padding:10px;
+     margin-left: auto;
+    margin-right: auto;
+    width: 42%;
 }
 
 /*.rightsidebar{
@@ -51,7 +55,8 @@ header h1{
 
 .rightSidebar{
     float:right;
-    display:block;
+    display:inline-block;
+
 }
 
 .ad-image{
@@ -75,3 +80,4 @@ header h1{
     display:block;
     border:1px dotted black;
 }
+
