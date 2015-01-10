@@ -23,11 +23,11 @@
                 <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
             </div>
 
-            <div class="col-sm-7" data-ng-class="adContent">
-                <label><strong>Text:</strong> </label> <textarea class="adsText">{{ad.text}}</textarea>
-                <label><strong>Name:</strong> </label> <div class="adsContent">{{ad.ownerName}}</div>
-                <label><strong>Email:</strong> </label> <div class="adsContent">{{ad.ownerEmail}}</div>
-                <label><strong>Phone:</strong> </label> <div class="adsContent">{{ad.ownerPhone}}</div>
+            <div class=" adsMainContent col-sm-7" data-ng-class="adContent">
+                <label> </label> <textarea class="adsText">{{ad.text}}</textarea>
+                <label><strong>Name:</strong> </label> <span class="adsContent">{{ad.ownerName}}</span><br/>
+                <label><strong>Email:</strong> </label> <span class="adsContent">{{ad.ownerEmail}}</span><br/>
+                <label><strong>Phone:</strong> </label> <span class="adsContent">{{ad.ownerPhone}}</span><br/>
                 <!--<div><strong>Town:</strong> {{ad.townName}}</div>
                 <div><strong>Category:</strong> {{ad.categoryName}}</div>
                 <div><strong>Status:</strong> {{ad.status}}</div>-->

@@ -442,6 +442,7 @@
     <Content Include="lib\bootstrap-theme.min.css" />
     <Content Include="lib\bootstrap.js" />
     <Content Include="lib\jquery.noty.packaged.js" />
+    <Content Include="lib\loading-bar.js" />
     <Content Include="lib\ui-bootstrap-tpls-0.12.0.min.js" />
     <Content Include="scripts\controllers\AddDetailsController.js" />
     <Content Include="scripts\controllers\AppController.js" />
@@ -460,6 +461,7 @@
     <Content Include="scripts\services\notifyService.js" />
     <Content Include="scripts\services\userSerivce.js" />
     <Content Include="styles\bootstrap.min.css" />
+    <Content Include="styles\loading-bar.css" />
     <Content Include="styles\style.css" />
     <Content Include="templates\adDetails.html" />
     <Content Include="templates\authentication.html" />

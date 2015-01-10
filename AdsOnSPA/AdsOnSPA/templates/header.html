@@ -1,13 +1,13 @@
 ﻿<header>
-    <h1 >Ads <span ng-if="pageTitle"> - {{pageTitle}}</span></h1>
+    <h1 >Ads <span data-ng-if="pageTitle"> - {{pageTitle}}</span></h1>
 </header>
 
-<div ng-if="authService.isNormalUser()" class="user-area">
+<div ng-if="authService.isNormalUser()" class="user-area" ng-controller="AppController">
     <span>{{authService.getCurrentUser().username}}</span>
     <a ng-click="logout()" class="button"><span ></span>Logout</a>
 </div>
 
-<div ng-if="authService.isLoggedIn()" class="user-area">
+<div ng-if="authService.isLoggedIn()" class="user-area" ng-controller="AppController">
     <span>{{authService.getCurrentUser().username}}</span>
     <a ng-click="logout()" class="link">Logout</a>
 </div>
