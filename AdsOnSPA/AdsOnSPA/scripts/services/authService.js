@@ -47,10 +47,7 @@ app.factory('authService',
             },
 
             isLoggedIn: function () {
-                var userObject = sessionStorage['currentUser'];
-                if (userObject) {
-                    return sessionStorage['currentUser']== true;
-                }
+                return sessionStorage['currentUser'] != undefined;
             },
 
             isNormalUser: function () {
@@ -59,7 +56,8 @@ app.factory('authService',
             },
 
             isAdmin: function () {
-                //TODO
+                var currentUser = this.getCurrentUser();
+                return (currentUser != undefined) && (currentUser.isAdmin);
             },
 
             getAuthHeaders: function () {

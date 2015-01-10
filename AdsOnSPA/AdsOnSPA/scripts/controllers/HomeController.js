@@ -1,9 +1,9 @@
 ﻿'use strict';
 
 app.controller('HomeController',
-    function ($scope, $route,$location, $log, adsData) {
+    function ($scope, $route,$location, $log, adsData, notifyService, pageSize) {
 
-        var info={
+        var adsParams = {
             startPage : 1,
             pageSize  : 10
         }
@@ -22,25 +22,25 @@ app.controller('HomeController',
             null,
             function success(data) {
                 $scope.ads = data;
+                  $location.path('/');
+            },
+            function error(err) {
+                notifyService.showError("Cannot load ads", err);
+            }
+           );
+
+        adsData.getById(ad)
+           .$promise
+            .then(function(response){
+                $scope.data = response;
+                $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
+                $scope.itemsPerPage = 10;
+               $scope.total = $scope.data.numItems;
                 $location.path('/');
             },
             function error(err) {
                 $log.error(error);
-            }
-            );
-
-        //adsData.getById(ad)
-        //   .$promise
-        //    .then(function(response){
-        //        $scope.data = response;
-        //        $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
-        //        $scope.itemsPerPage = 10;
-        //       $scope.total = $scope.data.numItems;
-        //        $location.path('/');
-        //    },
-        //    function error(err) {
-        //        $log.error(error);
-        //    });
+            });
 
         $scope.reload = function () {
             $route.reload();

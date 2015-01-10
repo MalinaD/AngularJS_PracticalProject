@@ -3,32 +3,10 @@
 
 
 <div data-ng-controller="HomeController">
-
-    <!--<pagination data-ng-controller="HomeController" total-items="ads.numItems"
-                ng-model="adsParams.startPage" items-per-page="adsParams.pageSize"
-                ng-change="pageChanged()" max-size="9" boundary-links="true">
-        <ul>
-            <li class="disabled"><a href="#">«</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">»</a></li>
-
-        </ul>
-    </pagination>-->
-
     <pagination total-items="ads.numItems" ng-model="adsParams.startPage"
                 items-per-page="adsParams.pageSize" ng-change="reloadAds()"
                 max-size="9" boundary-links="true">
     </pagination>
-
-    <!--<div class="row pagination-div">
-        <div class='col-md-9 col-sm-10 col-xs-12 col-centered'>
-            <div on-page-change="pageChanged(newPageNumber)" ng-include src="'../templates/pagination/pagination.html'"></div>
-        </div>
-    </div>-->
 
     <ul class="ads col-sm-8" data-ng-class="adContainerStyle">
         <li data-ng-repeat="ad in data.ads" class="box col-sm-10">
@@ -41,13 +19,12 @@
                 {{ad.date | date: 'dd-MMM-yyyy'}}
             </div>
 
-            <div ng-if="ad.imageDataUrl">
-                <strong>Image:</strong>
+            <div class="adsImage" ng-if="ad.imageDataUrl">
                 <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
             </div>
 
             <div class="col-sm-7" data-ng-class="adContent">
-                <label><strong>Text:</strong> </label> <div class="adsText">{{ad.text}}</div>
+                <label><strong>Text:</strong> </label> <textarea class="adsText">{{ad.text}}</textarea>
                 <label><strong>Name:</strong> </label> <div class="adsContent">{{ad.ownerName}}</div>
                 <label><strong>Email:</strong> </label> <div class="adsContent">{{ad.ownerEmail}}</div>
                 <label><strong>Phone:</strong> </label> <div class="adsContent">{{ad.ownerPhone}}</div>

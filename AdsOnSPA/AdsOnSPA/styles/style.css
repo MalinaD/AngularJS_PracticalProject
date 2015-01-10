@@ -60,8 +60,9 @@ header h1{
 }
 
 .ad-image{
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
+    padding:15px;
 }
 
 .ads h1{
@@ -72,12 +73,25 @@ header h1{
 
 .adsDate, .adsContent{
   font-size:18px;
-  font-weight:bold;
   text-align:right;
 } 
 
 .adsText{
-    display:block;
+    display:inline-block;
     border:1px dotted black;
+    width:400px;
+    height:150px;
+    float:right;
+    padding:10px;
+    margin:10px;
+}
+.adsImage{
+    display:inline-block;
+    border: 1px solid black;
+    border-radius:5px;
+    width:200px;
+    height:200px;
+    background-color:#b6ff00;
+    float:left;
 }
 
