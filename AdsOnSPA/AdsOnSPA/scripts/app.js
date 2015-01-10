@@ -26,7 +26,7 @@ app.config(function ($routeProvider) {
         controller: 'AddDetailsController'
     });
 
-    $routeProvider.when('/user/ads/publish', {
+    $routeProvider.when('/user/publish-new-add', {
         templateUrl: "../templates/publishNewAd.html",
         controller: 'UserPublishNewAdController'
     });

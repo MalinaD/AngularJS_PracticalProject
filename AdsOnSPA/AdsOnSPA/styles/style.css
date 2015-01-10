@@ -17,7 +17,7 @@ header h1{
     background-color:#54ad56;
     border: 1px solid black;
     border-radius:2px;
-    display:block;
+    display:inline-block;
     padding:3px;
     margin:15px;
     text-align:center;
@@ -51,6 +51,7 @@ header h1{
 
 .rightSidebar{
     float:right;
+    display:block;
 }
 
 .ad-image{

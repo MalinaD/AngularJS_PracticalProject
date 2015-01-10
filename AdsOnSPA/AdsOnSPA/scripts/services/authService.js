@@ -47,7 +47,10 @@ app.factory('authService',
             },
 
             isLoggedIn: function () {
-                //TODO
+                var userObject = sessionStorage['currentUser'];
+                if (userObject) {
+                    return sessionStorage['currentUser']== true;
+                }
             },
 
             isNormalUser: function () {

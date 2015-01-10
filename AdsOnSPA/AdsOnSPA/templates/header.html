@@ -1,3 +1,9 @@
 ﻿<header>
     <h1>Ads - {{pageTitle}}</h1>
 </header>
+
+<div ng-if="authService.isNormalUser()" class="user-area">
+    <span>{{authService.getCurrentUser().username}}</span>
+    <a ng-click="logout()" class="button"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+</div>
+

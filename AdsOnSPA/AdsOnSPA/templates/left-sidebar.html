@@ -24,9 +24,9 @@
             <li class="special"><a href="#/">Home</a></li>
 
             <li class="special">
-                <a href="#/login">Login</a>
+                <a href="#/login" >Login</a>
             </li>
-            <li class="special"><a href="#/register">Register</a></li>
+            <li class="special"><a href="#/register" >Register</a></li>
         </ul>
     </div>
 </div>
@@ -40,12 +40,12 @@
 </div>
 
 <!-- Navigation box for logged in normal users (not admins) -->
-<div ng-if="authService.isNormalUser()" class="box">
+<div ng-if="authService.isNormalUser()" class="box text-center">
     <h2>Navigation</h2>
     <ul class="sidebar-menu">
         <li><a href="#/">Home</a></li>
         <li><a href="#/user/ads">My Ads</a></li>
-        <!-- TODO: add “Publish New Ad” link -->
+        <li><a href="#/user/ads" ng-class="getClass('../templates/publishNewAd')" ng-click="publishNewAdd()">Publish New Ad</a></li>
         <!-- TODO: add “Edit Profile” link -->
         <li><a ng-click="logout()">Logout</a></li>
     </ul>
