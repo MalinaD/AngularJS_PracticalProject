@@ -98,7 +98,7 @@ adsMainContent{
     margin-top:10px;
           background-color:#b6ff00;
 }
-.adsImage{
+.adsImage,image-box{
     display:inline-block;
     border: 1px solid black;
     border-radius:5px;

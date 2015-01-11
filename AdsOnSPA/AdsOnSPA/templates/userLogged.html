@@ -1,0 +1,57 @@
+﻿<button class="btn" ng-click="reload()">Reload</button>
+
+
+<div data-ng-controller="userLogged">
+    <div class="content" style="height: 53px">
+        <div class="pull-right">
+            <span class="badge"><strong>{{$parent.userData.username}}</strong></span>
+        </div>
+    </div>
+</div>
+<div class="col-xs-1 v-center">
+    <div class="content" style="height: 53px">
+        <div class="pull-right">
+            <a href="#" class="btn btn-link" data-ng-click="logout()">Logout</a>
+        </div>
+    </div>
+</div>
+
+    <pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+                items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+                max-size="9" boundary-links="true">
+    </pagination>
+
+    <ul class="ads col-sm-8" data-ng-class="adContainerStyle">
+        <li data-ng-repeat="ad in data.ads" class="box col-sm-10">
+            <!--<a href="#/ads/{{ad.id}}"></a>-->
+            <h1>{{ad.title}}</h1>
+
+
+            <div class="adsDate">
+                <strong>Date:</strong>
+                {{ad.date | date: 'dd-MMM-yyyy'}}
+            </div>
+
+            <div class="adsImage" ng-if="ad.imageDataUrl">
+                <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+            </div>
+
+            <div class=" adsMainContent col-sm-7" data-ng-class="adContent">
+                <label> </label> <textarea class="adsText">{{ad.text}}</textarea>
+                <label><strong>Name:</strong> </label> <span class="adsContent">{{ad.ownerName}}</span><br />
+                <label><strong>Email:</strong> </label> <span class="adsContent">{{ad.ownerEmail}}</span><br />
+                <label><strong>Phone:</strong> </label> <span class="adsContent">{{ad.ownerPhone}}</span><br />
+                <!--<div><strong>Town:</strong> {{ad.townName}}</div>
+                <div><strong>Category:</strong> {{ad.categoryName}}</div>
+                <div><strong>Status:</strong> {{ad.status}}</div>-->
+            </div>
+
+        </li>
+    </ul>
+
+
+    <div ng-if="data.ads.length==0" class="box no-data">
+        No ads found. Please try again later.
+    </div>
+</div>
+

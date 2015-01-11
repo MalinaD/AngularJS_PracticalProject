@@ -2,6 +2,21 @@
     <h1 >Ads <span data-ng-if="pageTitle"> - {{pageTitle}}</span></h1>
 </header>
 
+<!--<div class="col-xs-1 v-center">
+    <div class="content" style="height: 53px">
+        <div class="pull-right">
+            <span class="badge"><strong>{{$parent.userData.username}}</strong></span>
+        </div>
+    </div>
+</div>
+<div class="col-xs-1 v-center">
+    <div class="content" style="height: 53px">
+        <div class="pull-right">
+            <a href="" data-ng-click="$parent.logout()">Logout</a>
+        </div>
+    </div>
+</div>-->
+
 <div ng-if="authService.isNormalUser()" class="user-area" ng-controller="AppController">
     <span>{{authService.getCurrentUser().username}}</span>
     <a ng-click="logout()" class="button"><span ></span>Logout</a>

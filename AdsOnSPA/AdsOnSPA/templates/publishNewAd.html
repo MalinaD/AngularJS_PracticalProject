@@ -1,4 +1,4 @@
-﻿<div class="box">
+﻿<div class="box" data-ng-controller="UserPublishNewAdController">
     <h2>Publish New Ad</h2>
 
     <p>
@@ -6,19 +6,37 @@
         <input type="text" id="title" ng-model="adsData.title" required />
     </p>
 
-    <!--TODO: add text field-->
+    <p>
+        <label for="title">Text:</label>
+        <input type="text" id="text" ng-model="adsData.text" required />
+    </p>
 
     <p>
-        <label for="category">Category:</label>
-        <select id="category" ng-model="adsData.categoryId">
-            <option value="null" >(None)</option>
+        <label for="categoryAd" class="control-label">Category:</label>
+        <select id="categoryAd" ng-model="adsData.categoryId" class="form-control">
+            <option value="null">(None)</option>
             <option ng-repeat="categ in categories" value="{{categ.id}}">
                 {{categ.name}}
             </option>
         </select>
     </p>
 
-    <!--TODO: town drop down menu-->
+    <p>
+        <label for="townAd" class="control-label">Town:</label>
+        <select id="townAd" ng-model="adsData.townId" class="form-control">
+            <option value="null">(None)</option>
+            <option ng-repeat="town in towns" value="{{town.id}}">
+                {{town.name}}
+            </option>
+        </select>
+    </p>
+
+    <p>
+        <label for="image">Image:</label>
+        <input type="file" id="image"
+               onchange="angular.element(this).scope().fileSelected(this)" />
+        <div class="image-box"> <p>Image Preview</p></div>
+    </p>
 
     <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">

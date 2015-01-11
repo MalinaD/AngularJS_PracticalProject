@@ -1,12 +1,16 @@
 ﻿'use strict';
 
-app.controller('HomeController',
+app.controller('userLogged',
     function ($scope, $route,$location, $log, adsData, notifyService, pageSize) {
-
         var adsParams = {
-            startPage : 1,
-            pageSize  : 60
+            startPage: 1,
+            pageSize: 60
         }
+
+        //var username = $cookieStore.get('username');
+        //if (username) {
+        //    $scope.userData.username = username;
+        //}
 
         var ad = {
             title: $scope.title,
@@ -14,7 +18,7 @@ app.controller('HomeController',
             image: $scope.image,
             imageDataUrl: $scope.imageDataUrl
             //TODO ,
-           // categoryId: $scope.catData.getSelectedCatId(),
+            // categoryId: $scope.catData.getSelectedCatId(),
             //townId: $scope.townData.getSelectedTownId()
         };
 
@@ -31,11 +35,11 @@ app.controller('HomeController',
 
         adsData.getById(ad)
            .$promise
-            .then(function(response){
+            .then(function (response) {
                 $scope.data = response;
                 $scope.numberOfPages = Math.ceil($scope.totalAds / $scope.itemsPerPage);
                 $scope.itemsPerPage = 10;
-               $scope.total = $scope.data.numItems;
+                $scope.total = $scope.data.numItems;
                 $location.path('/');
             },
             function error(err) {
@@ -65,27 +69,26 @@ app.controller('HomeController',
         };
 
         $scope.pageChanged = function () {
-                getResultsPage(newPage);
+            getResultsPage(newPage);
             $log.log('Page changed to: ' + $scope.currentPage);
         };
 
         function getResultsPage(pageNumber) {
             adsData.getAll(pageNumber, currentTownId, currentCategoryId)
                 .then(function (data) {
-                $scope.loading = true;
-                $scope.adsData = data;
-                $scope.totalAds = parseInt(data.numPages) * 5;
-                currentPage = pageNumber;
-            }, function (error) {
-                $rootScope.$broadcast('alertMessage', ajaxErrorText);
-            }).finally(function () {
-                $scope.loading = false;
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 1000);
-            });
+                    $scope.loading = true;
+                    $scope.adsData = data;
+                    $scope.totalAds = parseInt(data.numPages) * 5;
+                    currentPage = pageNumber;
+                }, function (error) {
+                    $rootScope.$broadcast('alertMessage', ajaxErrorText);
+                }).finally(function () {
+                    $scope.loading = false;
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000);
+                });
         }
 
     }
 );
-
