@@ -1,5 +1,8 @@
 ﻿<header>
-    <h1 >Ads <span data-ng-if="pageTitle"> - {{pageTitle}}</span></h1>
+    <h1 >Ads <span data-ng-if="pageTitle">&ndash;  {{pageTitle}}</span>
+        <span ng-if="$location.path()=='/login'"> &ndash; Login</span>
+        <span ng-if="$location.path()=='/register'"> &ndash; Register</span>
+    </h1>
 </header>
 
 <!--<div class="col-xs-1 v-center">
@@ -17,7 +20,7 @@
     </div>
 </div>-->
 
-<div ng-if="authService.isNormalUser()" class="user-area" ng-controller="AppController">
+<!--<div ng-if="authService.isNormalUser()" class="user-area" ng-controller="AppController">
     <span>{{authService.getCurrentUser().username}}</span>
     <a ng-click="logout()" class="button"><span ></span>Logout</a>
 </div>
@@ -25,4 +28,9 @@
 <div ng-if="authService.isLoggedIn()" class="user-area" ng-controller="AppController">
     <span>{{authService.getCurrentUser().username}}</span>
     <a ng-click="logout()" class="link">Logout</a>
+</div>-->
+
+<div ng-if="!authService.isAnonymous()" class="user-area">
+    <span>{{authService.getCurrentUser().username}}</span>
+    <a ng-click="logout()" class="button btn">Logout</a>
 </div>
