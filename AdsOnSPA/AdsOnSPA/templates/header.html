@@ -1,7 +1,7 @@
 ﻿<header>
     <h1 >Ads <span data-ng-if="pageTitle">&ndash;  {{pageTitle}}</span>
-        <span ng-if="$location.path()=='/login'"> &ndash; Login</span>
-        <span ng-if="$location.path()=='/register'"> &ndash; Register</span>
+        <span data-ng-if="$location.path()=='/login'"> &ndash; Login</span>
+        <span data-ng-if="$location.path()=='/register'"> &ndash; Register</span>
     </h1>
 </header>
 
@@ -31,6 +31,6 @@
 </div>-->
 
 <div ng-if="!authService.isAnonymous()" class="user-area">
-    <span>{{authService.getCurrentUser().username}}</span>
-    <a ng-click="logout()" class="button btn">Logout</a>
+    <span class="userName">{{authService.getCurrentUser().username}}</span>
+    <a ng-click="logout()" class="button btn btn-default">Logout</a>
 </div>

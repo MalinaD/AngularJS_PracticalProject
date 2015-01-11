@@ -15,7 +15,7 @@
 </div>-->
 
 <!-- Navigation box for anonymous site visitors -->
-<div class="panel panel-success box">
+<div class="panel panel-success box" data-ng-if="authService.isAnonymous()">
     <div class="panel-heading">
         <h3 class="panel-title">Navigation</h3>
     </div>
@@ -24,15 +24,15 @@
             <li class="special"><a href="#/">Home</a></li>
 
             <li class="special">
-                <a href="#/login" >Login</a>
+                <a href="#/login">Login</a>
             </li>
-            <li class="special"><a href="#/register" >Register</a></li>
+            <li class="special"><a href="#/register">Register</a></li>
         </ul>
     </div>
 </div>
 
 <!-- Login/register box for anonymous site visitors -->
-<div class="box" ng-if="authService.isAnonymous()">
+<div class="box" data-ng-if="authService.isAnonymous()">
     <p>To publish a new ad, please login.</p>
 
     <a href="#/login" class="button">Login</a>
@@ -40,13 +40,12 @@
 </div>
 
 <!-- Navigation box for logged in normal users (not admins) -->
-<div ng-if="authService.isNormalUser()" class="box text-center">
+<div data-ng-if="authService.isNormalUser()" class="box text-center">
     <h2>Navigation</h2>
     <ul class="sidebar-menu">
         <li><a href="#/">Home</a></li>
         <li><a href="#/user/ads">My Ads</a></li>
         <li><a href="#/user/ads/publish" ng-class="getClass('../templates/publishNewAd.html')" ng-click="publishNewAdd()">Publish New Ad</a></li>
         <!-- TODO: add “Edit Profile” link -->
-        <li><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>

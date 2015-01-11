@@ -18,16 +18,16 @@ app.controller('HomeController',
             //townId: $scope.townData.getSelectedTownId()
         };
 
-        //adsData.getAll(
-        //    null,
-        //    function success(data) {
-        //        $scope.ads = data;
-        //          $location.path('/');
-        //    },
-        //    function error(err) {
-        //        notifyService.showError("Cannot load ads", err);
-        //    }
-        //   );
+        adsData.getAll(
+            null,
+            function success(data) {
+                $scope.ads = data;
+                  $location.path('/');
+            },
+            function error(err) {
+                notifyService.showError("Cannot load ads", err);
+            }
+           );
 
         adsData.getById(ad)
            .$promise
